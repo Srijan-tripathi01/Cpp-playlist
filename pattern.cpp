@@ -601,28 +601,60 @@ int main(){
 	12******21
 	1********1
 */
+	// int n;
+	// cin>>n;
+	// int i=1;
+	// while(i<=n){
+	// 	int j=1;
+	// 	while(j<=n-i+1){
+	// 		cout<<j;
+	// 		j+=1;
+	// 	}
+	// 	int star=(i-1)*2;
+	// 	while(star){
+	// 		cout<<"*";
+	// 		star-=1;
+	// 	}
+	// 	int k=n-i+1;
+	// 	while(k){
+	// 		cout<<k;
+	// 		k-=1;
+	// 	}
+	// 	cout<<endl;
+	// 	i++;
+	// }
+
+/*	print-  for n=5 (extra)
+	123456789
+	1234 6789
+	123   789
+	12     89
+	1       9
+*/
 	int n;
 	cin>>n;
-	int i=1;
-	while(i<=n){
-		int j=1;
-		while(j<=n-i+1){
-			cout<<j;
-			j+=1;
+	for(int i=1;i<n*2;i++){
+		cout<<i;
+	}
+	cout<<endl;
+	for(int i=1;i<n;i++){
+		int count=1;
+		for(int j=0;j<n-i;j++){
+			cout<<count;
+			count++;
 		}
-		int star=(i-1)*2;
-		while(star){
-			cout<<"*";
-			star-=1;
+		for(int k=0;k<i*2-1;k++){
+			cout<<" ";
+			count++;
+
 		}
-		int k=n-i+1;
-		while(k){
-			cout<<k;
-			k-=1;
+		for(int l=0;l<n-i;l++){
+			cout<<count;
+			count++;
 		}
 		cout<<endl;
-		i++;
 	}
+
   
 	return 0;
 }
